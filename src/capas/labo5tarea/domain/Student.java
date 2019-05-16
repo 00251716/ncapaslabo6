@@ -23,7 +23,6 @@ public class Student {
 	@Column(name="b_active")
 	private Boolean bActivo;
 
-	//Constructors
 	public Student(Integer cCLiente, String sName, String lName, Integer sAge, Boolean bActivo) {
 		super();
 		this.cStudent = cCLiente;
@@ -37,7 +36,6 @@ public class Student {
 		super();
 	}
 
-	//Setters y Getters
 	public Integer getcStudent() {
 		return cStudent;
 	}
@@ -80,7 +78,6 @@ public class Student {
 		this.bActivo = bActivo;
 	}
 	
-	//Funciones delegate
 	public String getActivoDelegate() {
 		if(this.bActivo == null) return "";
 		else {
@@ -88,11 +85,5 @@ public class Student {
 		}
 	}
 
-	@Override
-	public String toString() {
-		return "Student [cStudent=" + cStudent + ", sName=" + sName + ", lName=" + lName + ", sAge=" + sAge
-				+ ", bActivo=" + bActivo + "]";
-	}
-	
 	
 }

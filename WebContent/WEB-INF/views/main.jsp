@@ -116,10 +116,12 @@
 		
 		<c:if test="${!(empty student)}">
 			<fieldset><legend>Datos del estudiante</legend>
-			<label for="field1"><span>ID </span> ${student.cStudent } </label>
-			<label for="field2"><span>Nombre </span>${student.sName}</label>
-			<label for="field3"><span>Apellido </span>${student.lName}</label>
-			<label for="field4"><span>Edad</span>${student.sAge }</label>
+			<label for="field1"><span>ID: </span> ${student.cStudent} </label>
+			<label for="field2"><span>Nombre: </span>${student.sName}</label>
+			<label for="field3"><span>Apellido: </span>${student.lName}</label>
+			<label for="field4"><span>Edad: </span>${student.sAge }</label>
+			<label for="field5"><span>Estado: </span> <c:choose> <c:when test="${student.bActivo == true}"> Activo </c:when>
+			 <c:when test="${student.bActivo == false}"> Inactivo </c:when> </c:choose> </label>
 		</fieldset>
 		</c:if>
 	</form>
