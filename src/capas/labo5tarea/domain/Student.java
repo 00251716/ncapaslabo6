@@ -4,9 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
-@Table(schema="public", name="student")
+@Table(schema="public",name="student")
 public class Student {
 	@Id
 	@Column(name="id_student")
@@ -24,7 +23,7 @@ public class Student {
 	@Column(name="b_active")
 	private Boolean bActivo;
 
-	//Constructores, Setters y Getters
+	//Constructors
 	public Student(Integer cCLiente, String sName, String lName, Integer sAge, Boolean bActivo) {
 		super();
 		this.cStudent = cCLiente;
@@ -38,17 +37,13 @@ public class Student {
 		super();
 	}
 
-
-
-
-
 	//Setters y Getters
-	public Integer getcCLiente() {
+	public Integer getcStudent() {
 		return cStudent;
 	}
 
 	
-	public void setcCLiente(Integer cCLiente) {
+	public void setcStudent(Integer cCLiente) {
 		this.cStudent = cCLiente;
 	}
 
@@ -92,5 +87,12 @@ public class Student {
 			return bActivo == true ?"Activo":"Inactivo";
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Student [cStudent=" + cStudent + ", sName=" + sName + ", lName=" + lName + ", sAge=" + sAge
+				+ ", bActivo=" + bActivo + "]";
+	}
+	
 	
 }
